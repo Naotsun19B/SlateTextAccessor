@@ -7,6 +7,7 @@
 #include "SlateTextAccessors/EditableTextAccessor.h"
 #include "SlateTextAccessors/EditableTextHandle.h"
 #include "SlateTextAccessors/TooltipTextAccessor.h"
+#include "SlateTextAccessors/TooltipTextHandle.h"
 
 #define LOCTEXT_NAMESPACE "SamplePluginActions"
 
@@ -89,6 +90,9 @@ namespace SamplePlugin
 				UE_LOG(LogSamplePlugin, Log, TEXT("%s"), *TextTooltip.ToString());
 			}
 		}
+		
+		const TSharedPtr<FTooltipTextHandle> TooltipTextHandle = FTooltipTextHandle::CreateTooltipTextHandle();
+		TooltipTextHandle->SetText(TEXT("Test Tooltip Text Accessor"));
 	}
 }
 
