@@ -90,8 +90,8 @@ namespace SamplePlugin
 				UE_LOG(LogSamplePlugin, Log, TEXT("%s"), *TextTooltip.ToString());
 				
 				const TSharedPtr<FTooltipTextHandle> TooltipTextHandle = FTooltipTextHandle::CreateTooltipTextHandle();
-                check(TooltipTextHandle.IsValid());
-                TooltipTextHandle->SetText(TEXT("Test Tooltip Text Accessor"));
+                		check(TooltipTextHandle.IsValid());
+                		TooltipTextHandle->SetText(TEXT("Test Tooltip Text Accessor"));
 			}
 		}
 	}
